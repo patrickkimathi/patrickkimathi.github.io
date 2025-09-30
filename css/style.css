@@ -1,0 +1,386 @@
+/* ===== General Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: #0d0d0d;
+  color: #e0e0ff;
+  line-height: 1.6;
+  min-height: 100vh;
+  margin-left: 10%;
+  margin-right: 10%
+}
+
+/* ===== Navbar ===== */
+header {
+  background: #1a0033;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 0 15px #8000ff;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: #ff00ff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  text-shadow: 0 0 10px #ff00ff;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #ccc;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #00ffff;
+  text-shadow: 0 0 8px #00ffff;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* ===== Card Layout for All Sections ===== */
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+  padding: 3rem 1rem 2rem 1rem;
+}
+
+.section-card {
+  background: #1a0033;
+  border-radius: 16px;
+  box-shadow: 0 0 18px #4d0099;
+  padding: 2.5rem 2rem;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  color: #eee;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.section-card:hover {
+  transform: translateY(-6px) scale(1.01);
+  box-shadow: 0 0 25px #ff00ff, 0 0 40px #ff00ff;
+}
+
+/* ===== Hero Section as Card ===== */
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+  background: none;
+  color: #fff;
+  box-shadow: none;
+  padding: 0;
+}
+
+.hero-text h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 10px #ff00ff;
+}
+
+.hero-text h1 span {
+  color: #ff00ff;
+  text-shadow: 0 0 12px #ff00ff;
+}
+
+.hero-text p {
+  margin-bottom: 1.5rem;
+  color: #d1c4e9;
+}
+
+.hero-image img {
+  max-width: 300px;
+  border-radius: 50%;
+  box-shadow: 0 0 25px #ff00ff;
+}
+
+/* ===== Buttons ===== */
+.btn {
+  display: inline-block;
+  background: #8000ff;
+  color: #fff;
+  padding: 0.7rem 1.2rem;
+  margin-right: 1rem;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: 0.3s;
+  box-shadow: 0 0 10px #8000ff, 0 0 20px #8000ff;
+}
+
+.btn:hover {
+  background: #ff00ff;
+  box-shadow: 0 0 15px #ff00ff, 0 0 30px #ff00ff;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid #ff00ff;
+  color: #ff00ff;
+}
+
+.btn-outline:hover {
+  background: #ff00ff;
+  color: #fff;
+  box-shadow: 0 0 15px #ff00ff;
+}
+
+/* ===== Highlights, Projects, Skills, Contact as Cards ===== */
+.highlights,
+.projects,
+.skills,
+.contact {
+  background: none;
+  box-shadow: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.highlights h2,
+.projects h2,
+.skills h2,
+.contact h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #ff00ff;
+  text-shadow: 0 0 8px #ff00ff;
+}
+
+.projects h2 {
+  color: #00ffff;
+  text-shadow: 0 0 10px #00ffff;
+}
+
+.cards,
+.project-list,
+.skill-list,
+.contact-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+/* Individual Card Styles */
+.card,
+.project-card,
+.skill-card,
+.contact-card {
+  background: #220044;
+  padding: 2rem;
+  border-radius: 12px;
+  width: 280px;
+  color: #eee;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 0 10px #4d0099;
+}
+
+.card:hover,
+.project-card:hover,
+.skill-card:hover,
+.contact-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 0 15px #ff00ff, 0 0 25px #ff00ff;
+}
+
+.skill-card:hover {
+  background: #330066;
+  color: #fff;
+}
+
+.project-card {
+  box-shadow: 0 0 12px #6600cc;
+}
+
+.project-card:hover {
+  box-shadow: 0 0 20px #00ffff, 0 0 30px #00ffff;
+}
+
+/* ===== Footer ===== */
+footer {
+  background: #1a0033;
+  color: #ccc;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+  box-shadow: 0 0 15px #6600cc;
+  border-radius: 0 0 16px 16px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Contact Page Card Layout */
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact .hero-image {
+  margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.contact-form,
+.contact-info {
+  background: #220044;
+  border-radius: 12px;
+  box-shadow: 0 0 12px #4d0099;
+  padding: 2rem 1.5rem;
+  width: 320px;
+  color: #eee;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.contact-form:hover,
+.contact-info:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 0 18px #ff00ff, 0 0 28px #ff00ff;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0.8rem;
+  border-radius: 8px;
+  border: none;
+  background: #1a0033;
+  color: #fff;
+  font-size: 1rem;
+  box-shadow: 0 0 6px #4d0099 inset;
+  outline: none;
+  transition: box-shadow 0.2s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  box-shadow: 0 0 10px #ff00ff;
+}
+
+.contact-form button {
+  width: 100%;
+  margin: 0;
+}
+
+.contact-info h3 {
+  margin-top: 1rem;
+  color: #ff00ff;
+  font-size: 1.1rem;
+  text-shadow: 0 0 6px #ff00ff;
+}
+
+.contact-info a {
+  color: #00ffff;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.contact-info a:hover {
+  color: #ff00ff;
+  text-shadow: 0 0 8px #ff00ff;
+}
+
+@media (max-width: 900px) {
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  .contact-form,
+  .contact-info {
+    width: 100%;
+    max-width: 400px;
+  }
+}
+
+/* ...existing code... */ 
+
+/* ===== Responsive Card Layout ===== */
+@media (max-width: 900px) {
+  .section-card {
+    max-width: 98vw;
+    padding: 2rem 0.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #220044;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 0 15px #6600cc;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.5rem;
+  }
+
+  .hero-image {
+    margin-top: 2rem;
+  }
+
+  .cards,
+  .project-list,
+  .skill-list,
+  .contact-list {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}
