@@ -314,24 +314,8 @@
         Includes primary/foreign keys for referential integrity. Each facility links to multiple staff, patients, and visits.
       </p>
 
-      <h3>Installation</h3>
-      <pre>
-        DROP DATABASE IF EXISTS healthDB;
-        CREATE DATABASE healthDB;
-        USE healthDB;
-        -- Execute provided CREATE TABLE statements
-      </pre>
-
-      <h3>Sample Query</h3>
-      <pre>
-        SELECT f.FACILITYNAME, c.COUNTYNAME
-        FROM facilities f
-        JOIN wards w ON f.WARDID = w.WARDID
-          JOIN subcounties s ON w.SUBCOUNTYID = s.SUBCOUNTYID
-        JOIN counties c ON s.COUNTYID = c.COUNTYID
-        WHERE c.COUNTYNAME = 'Nairobi';
-      </pre>
-
+  
+  
       <p><strong>Author:</strong> Patrick Kariuki</p>
       <a href="https://github.com/patrickkimathi/KHealthCareDBMS?tab=readme-ov-file" class="btn" target="_blank">View Schema</a>
     </div>
